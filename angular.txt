@@ -1,0 +1,98 @@
+                   Angular -it is a front end development tool 
+
+
+        Basic comments in Angular 
+          --------------------
+
+
+    1. To create an Angular Porject --  ng new project-name
+    2. To run an Angular project    --  ng serve / ng s
+    3. To geneRate a component      --  ng g c component-name
+    4. To generate service : ng g s --  service-folder/service-name
+
+
+
+    
+          Basic concepts in Angular
+            --------------------
+
+    1. Modules --> To import third party libraries ,also used to hold component
+    2. component --> Basic building blocks of angular html,css, Ts ,and also have selector
+    3.  selector --> to replace selector tag with its html page
+    4. Decerator --> To hold meta data, start with @
+    5. to view a componentin another page ----
+
+                *  set up a path for component --  app-routing -module
+                *  router-outlet--  to navigate according to the user requested page
+
+
+    6. data binding  -->  a data with in a component
+         two types of data sharing :
+
+              1*  One way binding
+                    data communication between TS(type script) to html or/ html to TS .
+                    data sharing in one direction.
+                    ithil TS ne common ayit parayuka "compnent" ennum html ne "view" ennum aan parayuka
+
+                    (TS to html)
+                          6.1.1   string interpolation
+                              syntax :  {{class property-name}}
+                          6.1.2   property binding    
+                              syntax : [attribute-name]="property"
+
+
+                One way binding to html(view) - Ts (component)
+
+                       6.2.1    event binding
+                             
+                             syntax : (event-name)="function call"   
+                       6.2.2 event binding (using $(doller) event)
+
+                             syntax : (event-name)="function-name($event)"   
+                       6.2.3 using template reference variable  (#)
+
+                             syntax : # variable-name            
+
+
+              2*  Two way binding -- data sharing in both direction
+                     
+                      ngModel import formModule in appModule 
+                         
+                           syntax :  [(ngModel)]="class property"
+               angularnn mathre llu ee Two way binding enna feature.
+               two way binding cheyyanamenkil formModule venam.
+
+>  Generally binding is used for data collection
+       7. Angular Forms
+            1. template driven forms -- html page then it is known as template driven forms 
+            2. model driven form     -- it has a view we can write TS then we create html page .ie.  known as model driven       
+
+            navigateByUrl-router class
+       8. Dependancy injection : to share data between dependent classes
+
+                  syntax : constructor (access-specifier variable-name:class-name){
+
+
+                  }    
+
+            * variable-dependent class variable
+
+   >> nammal swanthamayi(userdefined classes) create cheytha 2 classkal thammil data share cheyyan kazhiyilla dependency injection nadakkilla
+      so athinayi use cheyyunnathaann service
+
+       9. angular service           
+
+           eg:    login page  -->  sevice  -->home page
+
+      10. Angular directives : DOM manipulation
+
+            10.1 component view \component Directive   
+            10.2 structural Directive \ structural view
+                   syntax : *ngFor="let variable-name of array-name"
+            10.3 attribute Directive : at app        
+
+
+      11. parent-child data sharing
+
+                - child to parent communication     @output Decerator
+                - parent to child communication     @input  Decorator        
